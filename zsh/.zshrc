@@ -12,8 +12,16 @@ HISTSIZE=100
 SAVEHIST=20
 setopt appendhistory
 
+
 neofetch
 
+add_sudo (){
+prefix="sudo"
+BUFFER="$prefix $BUFFER"
+CURSOR=$(($CURSOR + $#prefix + 1))
+}
+zle -N add_sudo
+bindkey "^[s" add_sudo
 
 zplug "dracula/zsh", as:theme
 zplug "zsh-users/zsh-history-substring-search"
