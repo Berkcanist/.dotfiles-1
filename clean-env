@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+stow -D i3
+stow -D nvim
+stow -D polybar
+stow -D zsh

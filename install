@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+stow -D i3
+stow i3
+stow -D nvim
+stow nvim
+stow -D polybar
+stow polybar
+stow -D zsh
+stow zsh
