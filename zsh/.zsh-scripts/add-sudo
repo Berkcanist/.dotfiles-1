@@ -1,0 +1,7 @@
+add_sudo (){
+prefix="sudo"
+BUFFER="$prefix $BUFFER"
+CURSOR=$(($CURSOR + $#prefix + 1))
+}
+zle -N add_sudo
+bindkey "^[s" add_sudo

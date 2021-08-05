@@ -1,0 +1,4 @@
+HISTFILE=~/.histfile
+HISTSIZE=100
+SAVEHIST=20
+setopt appendhistory

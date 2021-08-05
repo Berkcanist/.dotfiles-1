@@ -14,3 +14,4 @@ alias serverconnect="sudo ssh -i "~/.ssh/linux.pem" admin@ec2-52-57-4-241.eu-cen
 alias serverconnect2="sudo ssh -i "~/.ssh/LightsailDefaultKey-eu-central-1.pem" admin@3.69.111.124"
 alias servsftp="sudo sftp -i "~/.ssh/linux.pem" admin@ec2-52-57-4-241.eu-central-1.compute.amazonaws.com"
 alias servsftp2="sudo sftp -i "~/.ssh/LightsailDefaultKey-eu-central-1.pem" admin@3.69.111.124"
+alias ls="ls --color"
