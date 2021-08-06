@@ -1,9 +1,10 @@
 set encoding=utf8
 set guifont=DroidSansMono\ Nerd\ Font\ 11
-set shell=fish
+set shell=zsh
 set clipboard+=unnamedplus
 set smartindent
 set number
+set relativenumber
 
 call plug#begin("~/.vim/plugged")
 " Plugin Section
