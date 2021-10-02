@@ -5,6 +5,9 @@ case "$1" in
     lock)
         betterlockscreen -l
         ;;
+    switch)
+        dm-tool switch-to-greeter
+        ;;
     logout)
         i3-msg exit
         ;;
@@ -18,10 +21,10 @@ case "$1" in
         systemctl reboot
         ;;
     shutdown)
-        sudo openrc-shutdown -p 0
+        shutdown 0
         ;;
     *)
-        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        echo "Usage: $0 {lock|switch|logout|suspend|hibernate|reboot|shutdown}"
         exit 2
 esac
 

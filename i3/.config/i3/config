@@ -120,9 +120,10 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #Press ctrl+alt+x - check toolbar for next choices
 bindsym control+mod1+X mode "$mode_system"
 
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (k) lock, (a) switch (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym a exec --no-startup-id ~/.config/i3/scripts/i3exit.sh switch, mode "default"
     bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
     bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
@@ -326,7 +327,7 @@ for_window [class="Firefox"] focus
 # Workspace 2 text editor related
 
 # Workspace 3 Inkscape
-assign [class="mpv"] → 3
+#assign [class="mpv"] → 3
 
 # Workspace 4 Gimp
 assign [class="Gimp"] → 4

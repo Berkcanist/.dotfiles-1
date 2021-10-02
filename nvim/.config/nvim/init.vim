@@ -29,9 +29,9 @@ call plug#begin("~/.vim/plugged")
 	Plug 'airblade/vim-gitgutter'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+        Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'tpope/vim-fugitive'
-	Plug 'iamcco/markdown-preview.nvim' 
-        Plug 'digitaltoad/vim-pug'
+	Plug 'digitaltoad/vim-pug'
 call plug#end()
 "Coc
 	let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
@@ -76,7 +76,7 @@ call plug#end()
 
 " open terminal on ctrl+n
 	function! OpenTerminal()
-	split term://fish
+	split term://zsh
 	resize 10
 	endfunction
 	nnoremap <c-n> :call OpenTerminal()<CR>
@@ -98,7 +98,7 @@ call plug#end()
 	  \ 'ctrl-s': 'split',
 	  \ 'ctrl-v': 'vsplit'
 	  \}
-	let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+	let $FZF_DEFAULT_COMMAND = 'rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/**,.next/*}"'
 " go to definition
 	nnoremap gd :YcmCompleter GoTo<CR>
 	nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
