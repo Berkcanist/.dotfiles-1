@@ -10,7 +10,8 @@
     "scss",
     "js",
     "jade",
-    "pug"
+    "pug",
+    "html"
   ],
   "eslint.filetypes": [
     "javascript",
