@@ -8,5 +8,4 @@ source ~/.zsh-scripts/git
 source ~/.zsh-scripts/add-sudo
 source ~/.zsh-scripts/history
 source ~/.zsh-scripts/zsh-syntax-highlighting.zsh
-source ~/.zsh-scripts/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh-scripts/goto.sh

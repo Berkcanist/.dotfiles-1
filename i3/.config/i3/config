@@ -376,6 +376,9 @@ for_window [class="Workflowy"] focus
 
 # USER APPLICATIONS TO START AT BOOT
 
+exec --no-startup-id xfsettingsd
+
+
 # Autotiling
 exec_always --no-startup-id autotiling
 
@@ -401,7 +404,6 @@ exec --no-startup-id ~/Appimages/brave-bg
 # exec --no-startup-id aw-qt
 
 #exec --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id xset r rate 300 50
 
 
 #Authentication dialog
@@ -414,8 +416,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #exec --no-startup-id blueberry-tray
 
 # network
-exec --no-startup-id nm-applet
-#exec --no-startup-id connman-gtk
+#exec --no-startup-id nm-applet
+exec --no-startup-id connman-gtk
 
 
 # num lock activated
@@ -433,6 +435,7 @@ exec --no-startup-id nitrogen --restore
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
+exec_always --no-startup-id xset r rate 300 50
 
 
 #####################################################################################################################
