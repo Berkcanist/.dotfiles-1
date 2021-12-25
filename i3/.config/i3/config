@@ -204,8 +204,8 @@ bindsym $mod+Shift+Right move right
 
 # next/previous workspace
 
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
+#bindsym Mod1+Tab workspace next
+#bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+Tab workspace back_and_forth
 
 #navigate workspaces next / previous
@@ -384,7 +384,7 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id mpris-proxy
 
 #pulseeffects
-exec --no-startup-id pulseeffects --gapplication-service
+exec --no-startup-id easyeffects --gapplication-service
 
 # TRAY APPLICATIONS
 

@@ -5,6 +5,10 @@ set clipboard+=unnamedplus
 set smartindent
 set number
 set relativenumber
+command Spellen set spell spelllang=en
+command Spelltr set spell spelllang=tr
+nnoremap <C-x> z=
+
 
 call plug#begin("~/.vim/plugged")
 " Plugin Section
