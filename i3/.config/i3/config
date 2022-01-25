@@ -219,6 +219,7 @@ for_window [urgent=latest] focus
 
 
 
+
 #####################################################################################################################
 #################                          Tiling parameters                                        #################
 #####################################################################################################################
@@ -399,7 +400,7 @@ exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id /usr/lib/kdeconnectd
 exec --no-startup-id joplin-desktop
 exec --no-startup-id xhost +
-exec --no-startup-id redshift
+exec --no-startup-id redshiftgui
 exec --no-startup-id nextcloud
 exec --no-startup-id ~/Appimages/brave-bg
 # exec --no-startup-id aw-qt
@@ -550,7 +551,9 @@ for_window [class="Gnome-disks"] floating disable
 for_window [class="Pavucontrol"] floating disable
 #for_window [class=^Vlc$"] floating disable
 for_window [class="Wine"] floating disable
-for_window [class="Battle.net"] floating disable
+for_window [class="battle.net.exe"] floating disable
+for_window [instance="origin.exe"] floating enable
+for_window [instance="gnome-calculator"] floating enable
 
 
 
@@ -817,3 +820,4 @@ bindsym control+mod1+o exec --no-startup-id ~/.i3/scripts/picom-toggle.sh
 # Settings of arcolinux will be applied
 #exec --no-startup-id setxkbmap be
 #exec --no-startup-id setxkbmap us
+

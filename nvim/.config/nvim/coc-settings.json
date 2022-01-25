@@ -11,7 +11,8 @@
     "js",
     "jade",
     "pug",
-    "html"
+    "html",
+    "vue"
   ],
   "eslint.filetypes": [
     "javascript",
