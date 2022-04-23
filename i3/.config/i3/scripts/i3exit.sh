@@ -1,9 +1,7 @@
 #!/bin/sh
-
-
 case "$1" in
     lock)
-        betterlockscreen -l
+        i3lock -c 090000
         ;;
     switch)
         dm-tool switch-to-greeter

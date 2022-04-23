@@ -966,7 +966,7 @@ format-connected-underline = #62FF00
 
 [module/pacman-updates]
 type = custom/script
-exec = paru -Qu | wc -l
+exec = dnf check-update -q  | wc -l
 ;exec = checkupdates-aur | wc -l
 interval = 1000
 label = Update: %output%
@@ -981,7 +981,7 @@ format-underline = #FFBB00
 [module/pamac-manager]
 type = custom/script
 ;exec = pamac checkupdates -q | wc -l
-exec = yay -Qu | wc -l
+exec = dnf check-update -q  | wc -l
 interval = 1000
 label = Updates : %output%
 tail = true

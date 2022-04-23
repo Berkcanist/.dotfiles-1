@@ -1,4 +1,4 @@
-set encoding=utf8
+set encoding=UTF-8
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 set shell=zsh
 set clipboard+=unnamedplus
@@ -12,7 +12,8 @@ nnoremap <C-x> z=
 
 call plug#begin("~/.vim/plugged")
 " Plugin Section
-	Plug 'dracula/vim'
+	" Plug 'dracula/vim'
+	Plug 'shaunsingh/nord.nvim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'	
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -33,9 +34,10 @@ call plug#begin("~/.vim/plugged")
 	Plug 'airblade/vim-gitgutter'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-        Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'tpope/vim-fugitive'
 	Plug 'digitaltoad/vim-pug'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
+
 call plug#end()
 "Coc
 	let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
@@ -44,7 +46,6 @@ call plug#end()
 	nmap ghp <Plug>(GitGutterPreviewHunk)
 
 "md reader
-	let g:mkdp_browser = 'firefox'
 	nmap <C-M-d> <Plug>MarkdownPreview
 	nmap <C-M-a> <Plug>MarkdownPreviewToggle
 "Config Section
@@ -52,7 +53,8 @@ call plug#end()
 		set termguicolors
 	endif
 	syntax enable
-	colorscheme dracula
+	" colorscheme dracula
+	colorscheme nord
 
 	let g:NERDTreeShowHidden = 1
 	let g:NERDTreeMinimalUI = 1
@@ -139,3 +141,5 @@ let g:closetag_regions = {
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
